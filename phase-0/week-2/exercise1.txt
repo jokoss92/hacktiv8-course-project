@@ -1,0 +1,80 @@
+Soal 1 Newton Second Law
+--------------------------------------------------
+a. Algorithm
+1. Get value of mass (m)
+2. Get value of acceeration (a)
+3. Get value of force (f) from calculation : m*a 
+--------------------------------------------------
+b. Pseudocode
+START
+
+STORE 'mass' with any value
+STORE 'acceleration' with any value
+STORE 'force' without any value
+
+CALCULATE 'mass' times 'acceleration'
+SET 'force' value with calculation result
+
+DISPLAY force
+END
+--------------------------------------------------
+
+--------------------------------------------------
+Soal 2 Tahun Kabisat
+--------------------------------------------------
+a. Algorithm
+1. Get value of year
+2. Calculate year if 
+--------------------------------------------------
+b. Pseudocode
+START
+STORE 'year' with any value
+IF 'year' modulus 4 equals to 0 and year modulus 100 not equals to 100 
+OR
+ 'year' modulus 4 equals to 0 and 'year' modulus 100 equals to 0 and 'year' modulus 400 equals to 0
+    DISPLAY "Leap Year"
+ELSE 
+    DISPLAY "Gregorian Year"
+END
+--------------------------------------------------
+
+--------------------------------------------------
+Soal 3 Laundry Day
+--------------------------------------------------
+a. Algoritma
+1. Set 'clothes' with 1
+2. Add 'clothes' 1 by 1 until equals to 21
+3. When 'clothes' value equals to 20, turn on the washing machine
+--------------------------------------------------
+b. Pseudocode
+START
+STORE 'clothes' with 1
+WHILE 'clothes'  equal or less than 20
+    ADD 'clothes' by 1
+    DISPLAY "turn on the washing machine"
+ELSE
+    DISPLAY "not yet started"
+END
+--------------------------------------------------
+
+--------------------------------------------------
+Soal 4 Periksa Kuku
+--------------------------------------------------
+a. Algorithm
+1. Get value of amount student
+2. Check student 1 by 1
+3. Check the nails of the student
+4. Punish student with long nails and praise student with short nails
+--------------------------------------------------
+b. Pseudocode
+START
+STORE 'amountStudent' with 40
+FOR STORE 'student' with 1
+WHILE 'student' less than or equals to 'amountStudent'
+IF 'student' has 'long nails'
+    DO DISPLAY 'Teacher punish student'
+    ELSE 
+    DISPLAY 'Teacher praise student'
+    ADD 'student' by 1
+END
+--------------------------------------------------
