@@ -7,7 +7,7 @@ var input = [
 ]
 
 // var inputRow = input.length;
-function dataHandling(){
+function dataHandling(input){
     for(var i=0; i<input.length; i++){
         console.log("Nomor ID: " + input[i][0]);
         console.log("Nama Lengkap: " + input[i][1]);
