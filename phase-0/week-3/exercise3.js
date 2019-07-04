@@ -16,5 +16,5 @@ function dataHandling(input){
     }
 }
 
-console.log(dataHandling(input));
+dataHandling(input);
 
