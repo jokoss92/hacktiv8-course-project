@@ -21,9 +21,9 @@
     1. Dilarang menggunakan built in function apapun.
 */
 
-var jenisPakaian = ''; // silahkan beri nilai bebas
-var pakaianPerluDisetrika = false; // silahkan beri nilai bebas
-var panjangPakaian = 15; // silahkan beri nilai bebas
+var jenisPakaian = 'sprei'; // silahkan beri nilai bebas
+var pakaianPerluDisetrika = true; // silahkan beri nilai bebas
+var panjangPakaian = 200; // silahkan beri nilai bebas
 
 // code here
 if(jenisPakaian ===""){

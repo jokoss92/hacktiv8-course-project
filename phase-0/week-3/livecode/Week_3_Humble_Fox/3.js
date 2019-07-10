@@ -31,7 +31,7 @@
     2. Asumsi nilai minimum max adalah 1.
 */
 
-var max =-1; // silahkan beri nilai bebas
+var max =9; // silahkan beri nilai bebas
 
 // code here
 if(max <1){
