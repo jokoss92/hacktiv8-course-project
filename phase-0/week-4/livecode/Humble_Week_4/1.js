@@ -33,11 +33,11 @@
 /*
 SET result with 0
 SET i with 0 doing looping increase by 1 until less than stringNumber length 
-  IF index on i modulus 2 not same as 0
-    THEN index on i convert to number time with 2 
+  IF string number on i modulus 2 not same as 0
+    THEN string number on i convert to number time with 2 
     THEN add to the result
   ELSE
-    THEN add result with index on i convert to number
+    THEN add result with string number on i convert to number
 DISPLAY result
 */
 

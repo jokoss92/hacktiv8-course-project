@@ -54,11 +54,13 @@ function richestGroup(groups) {
   var countA = 0
   var countB = 0
   for(var i=0; i<groups.length;i++){
-    if(groups[i][0] === 'A' && groups[i][1] !== 'B'){
-      countA++
-    } if (groups[i][0] === 'B' && groups[i][1] !== 'A'){
-      countB++
-    }
+      for(var j=0; j<groups[i].length; j++){
+          if(groups[i][j] === 'A' && groups[i][j+1] !== 'A'){
+              countA++
+            } if (groups[i][j] === 'B' && groups[i][j+1] !== 'A'){
+              countB++
+            }
+      }
   }
   if (countA > countB){
     return "Group A win..."
