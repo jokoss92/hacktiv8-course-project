@@ -1,13 +1,28 @@
 function changeMe(arr) {
     // you can only write your code here!
-    var join = {}
     for(i =0;i<arr.length; i++){
+        var result = {}
+        var key1 = 'firstName'
+        var key2 = 'lastName'
+        var key3 = 'gender'
+        var key4 = 'age'
         // join[i] = arr[i]
-        console.log( i+1+'. '+arr[i][0]+" "+arr[i][1])
         // return join
+        result.firstName = arr[i][0]
+        result.lastName = arr[i][1]
+        result.gender = arr[i][2]
+        if(arr[i][3] === undefined){
+            result.age = 'Invalid Birth Year'
+        } else {
+            result.age = 2019 - arr[i][3]
+        }
+        console.log(i+1+'. '+arr[i][0]+" "+arr[i][1] + '\n' + JSON.stringify(result, null, 2))
+        }
         
     }
-  }
+    // return   i+1+'. '+arr[i][0]+" "+arr[i][1] + result
+    
+
   
   // TEST CASES
   changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']]); // 1. Christ Evans:

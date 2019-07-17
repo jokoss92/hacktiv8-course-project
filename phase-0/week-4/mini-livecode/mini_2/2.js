@@ -29,29 +29,33 @@
   RULES:
     1. dilarang menggunakan built in function .split, .reversed, .join, .filter, .map dan sejenisnya
 */
+function isPrime(){
 
-function changeWords(words) {
-  // code below 
-  var result = []
-  for(var i=0; i<words.length; i++){
-    if((i===2 || i===3)||(i%2 !==0 && i%3 !==0)){
-      result.replace("[aiueo]","")
-    } else if(i%2 === 0){
-      for(var j=words.length; j>0; j--){
-        result.push(words[i])
-      }
-    } else {
-      words[i]=words[i].toUpperCase()
-    }
+}
+
+function isEven(){
+
+}
+
+function isOdd(){
+  if(sumIandJ%2 !== 0){
+    
   }
-};
 
-var words = [
-  ["cat", "dog", "fish"],
-  ["cat", "dog", "fish"], 
-  ["cat", "dog", "fish"]
-]
-console.log(changeWords(words))
+}
+function changeWords(words) {
+	// code below
+	var result = [];
+	for (var i = 0; i < words.length; i++) {
+		for (var j = 0; j < words[i].length; j++) {
+			sumIandJ = i + j;
+			console.log(sumIandJ);
+		}
+	}
+}
+
+var words = [ [ 'cat', 'dog', 'fish' ], [ 'cat', 'dog', 'fish' ], [ 'cat', 'dog', 'fish' ] ];
+console.log(changeWords(words));
 /*
 [ 
   [ 'tac', 'DOG', 'hsf' ],

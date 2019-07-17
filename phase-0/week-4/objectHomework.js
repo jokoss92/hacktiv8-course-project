@@ -22,8 +22,15 @@ var insertToObjects = [
   ['Saitama', 'Hero Associate', 18]
 ]
 
+// var resultObject = {}
+// var key = Name
+// for(var i =0;i<insertToObjects.length;i++){
+//   resultObject[key] = insertToObjects[i][0]
+// }
+
+// console.log(resultObject)
+var result = {}
 function objectFromArray(insertToObjects){
-  var result = {}
   for(var i=0; i<insertToObjects.length; i++){
     result = {
       name : insertToObjects[i][0],

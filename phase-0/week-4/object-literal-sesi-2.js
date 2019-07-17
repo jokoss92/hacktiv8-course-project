@@ -6,27 +6,27 @@
   5. Object.keys dan Object.values
 */
 
-var student = {
-  name: 'tatag',
-  batch: '30-humble-fox',
-  age: 28,
-  hobbies: [
-    {
-      nama: 'ngoding',
-      kemampuan: 'advanced'
-    },
-    {
-      nama: 'baca dokumentasi',
-      kemampuan: 'moderate'
-    },
-    {
-      nama: 'main codewars',
-      kemampuan: 'expert'
-    }
-  ],
-  laguFavorit: 'cinta satu malam',
-  '1': 'satu'
-}
+// var student = {
+//   name: 'tatag',
+//   batch: '30-humble-fox',
+//   age: 28,
+//   hobbies: [
+//     {
+//       nama: 'ngoding',
+//       kemampuan: 'advanced'
+//     },
+//     {
+//       nama: 'baca dokumentasi',
+//       kemampuan: 'moderate'
+//     },
+//     {
+//       nama: 'main codewars',
+//       kemampuan: 'expert'
+//     }
+//   ],
+//   laguFavorit: 'cinta satu malam',
+//   '1': 'satu'
+// }
 
 // console.log(student['1'])
 
@@ -36,17 +36,17 @@ var student = {
 // student.age = 28
 
 // 1. Mengakses
-var umur = 'batch'
+// var umur = 'batch'
 // console.log(student.age)
 // console.log(student[umur]) // student['age'] == student.age
 
 
 // 2.
-let keys = Object.keys(student)
+// let keys = Object.keys(student)
 
-for(var i = 0 ; i < keys.length; i++) {
-  // console.log(keys[i], student[keys[i]])
-}
+// for(var i = 0 ; i < keys.length; i++) {
+//   // console.log(keys[i], student[keys[i]])
+// }
 
 var arrStudents = [
   ['Joko', 25],
@@ -71,13 +71,13 @@ for(var i = 0 ; i < arrStudents.length; i++) {
     objStudents[arrStudents[i][0]] += arrStudents[i][1]
   }
 }
-// console.log(objStudents)
+console.log(objStudents)
 
-var values = Object.values(student)
+// var values = Object.values(student)
 
 // console.log(keys, values)
 
 
-for(var key in student) {
-  console.log(key, '\t', student[key])
-}
+// for(var key in student) {
+//   console.log(key, '\t', student[key])
+// }
