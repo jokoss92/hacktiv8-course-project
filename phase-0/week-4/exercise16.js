@@ -1,15 +1,21 @@
 function graduates (students) {
     // Code disini
+    var objGraduates = {}
     for (var i=0;i<students.length;i++){
-        var objClass = {}
-        objClass
-        if(students[0].class !== objClass){
-            objClass = {}
-        }
-    }
-    return objClass
+     if(students[i].score > 75){
+       if(objGraduates[students[i].class] === undefined){
+          objGraduates[students[i].class] = [
+            { name : students[i].name,
+              score : students[i].score }
+          ]
+      } else {
+        objGraduates[students[i].class].push({ name : students[i].name,
+          score : students[i].score })
+      }
+     }
   }
-  
+  return objGraduates
+}
   console.log(graduates([
     {
       name: 'Dimitri',

@@ -1,15 +1,21 @@
 function highestScore (students) {
     // Code disini
-    
-    var arrResult = []
+    var objStudent = {}
     for(var i=0;i<students.length;i++){
-       var result = {}
-       if(result.class !== students[i].class){
-         result.class = students[i].class
+       if(objStudent[students[i].class] === undefined){
+         objStudent[students[i].class] = {
+           name : students[i].name,
+           score : students[i].score
+         }
+       } else{
+         if(objStudent[students[i].score]<students[i].score){
+           objStudent[students[i].name] = students[i].name,
+           objStudent[students[i].score] = students[i].score
+         }
        }
        
     }
-    console.log(result)
+    return objStudent
   }
   
   // TEST CASE
