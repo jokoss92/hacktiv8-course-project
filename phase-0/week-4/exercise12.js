@@ -1,30 +1,40 @@
 function countProfit(shoppers) {
-    let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
-                       ['Baju Zoro', 500000, 2],
-                       ['Sweater Uniklooh', 175000, 1]
-                     ];
-    // you can only write your code here!
-    var objectBarang = {}
-    var result = {}
-    for(var i=0; i<listBarang.length; i++){
-        objectBarang.product = listBarang[i][0]
-        objectBarang.price = listBarang[i][1]
-        objectBarang.amount = listBarang[i][2]
-        
-    }
-    for(var j=0; j<shoppers.length;j++){
-        var objectShoppers = {}
-        objectShoppers.product = shoppers[j].product
-        objectShoppers.name = shoppers[j].name
-    }
-    console.log(objectShoppers)
+	let listBarang = [
+		[ 'Sepatu Stacattu', 1500000, 10 ],
+		[ 'Baju Zoro', 500000, 2 ],
+		[ 'Sweater Uniklooh', 175000, 1 ]
+	];
+	// you can only write your code here
+  var arrResult = []
+	for (var i = 0; i < listBarang.length; i++) {
+    var objectShoppers = {};
+		var arrShoppers = [];
+		var jumlahBeli = 0;
+		for (var j = 0; j < shoppers.length; j++) {
+			if (listBarang[i][0] === shoppers[j].product && shoppers[j].amount < listBarang[i][2]) {
+				arrShoppers.push(shoppers[j].name);
+				jumlahBeli += shoppers[j].amount;
+			}
+			objectShoppers.product = listBarang[i][0];
+			objectShoppers.shoppers = arrShoppers;
+      objectShoppers.leftOver = listBarang[i][2] - jumlahBeli;
+      objectShoppers.totalProfit = jumlahBeli * listBarang[i][1]
+		}
+		arrResult.push(objectShoppers)
   }
+  return arrResult
+}
 
 //   console.log(objectBarang)
 
-  
 //   // TEST CASES
-  console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 2}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 2}]));
+console.log(
+	countProfit([
+		{ name: 'Windi', product: 'Sepatu Stacattu', amount: 2 },
+		{ name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3 },
+		{ name: 'Rani', product: 'Sweater Uniklooh', amount: 2 }
+	])
+);
 //   //[ { product: 'Sepatu Stacattu',
 //   //   shoppers: [ 'Windi', 'Vanessa' ],
 //   //   leftOver: 5,
@@ -37,8 +47,16 @@ function countProfit(shoppers) {
 //   //   shoppers: [],
 //   //   leftOver: 1,
 //   //   totalProfit: 0 } ]
-  
-//   console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 8}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 1}, {name: 'Devi', product: 'Baju Zoro', amount: 1}, {name: 'Lisa', product: 'Baju Zoro', amount: 1}]));
+
+console.log(
+	countProfit([
+		{ name: 'Windi', product: 'Sepatu Stacattu', amount: 8 },
+		{ name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10 },
+		{ name: 'Rani', product: 'Sweater Uniklooh', amount: 1 },
+		{ name: 'Devi', product: 'Baju Zoro', amount: 1 },
+		{ name: 'Lisa', product: 'Baju Zoro', amount: 1 }
+	])
+);
 //   // [ { product: 'Sepatu Stacattu',
 //   //     shoppers: [ 'Windi' ],
 //   //     leftOver: 2,

@@ -1,13 +1,16 @@
-function highestScore (students) {
+function graduates (students) {
     // Code disini
-    var result = {}
-    for(var i=0;i<students.length;i++){
-       consogit 
+    for (var i=0;i<students.length;i++){
+        var objClass = {}
+        objClass
+        if(students[0].class !== objClass){
+            objClass = {}
+        }
     }
+    return objClass
   }
   
-  // TEST CASE
-  console.log(highestScore([
+  console.log(graduates([
     {
       name: 'Dimitri',
       score: 90,
@@ -31,12 +34,16 @@ function highestScore (students) {
   ]));
   
   // {
-  //   foxes: { name: 'Dimitri', score: 90 },
-  //   wolves: { name: 'Alexei', score: 85 }
+  //   foxes: [
+  //     { name: 'Dimitri', score: 90 }
+  //   ],
+  //   wolves: [
+  //     { name: 'Alexei' , score: 85 },
+  //     { name: 'Anastasia', score: 78 }
+  //   ]
   // }
   
-  
-  console.log(highestScore([
+  console.log(graduates([
     {
       name: 'Alexander',
       score: 100,
@@ -65,10 +72,17 @@ function highestScore (students) {
   ]));
   
   // {
-  //   foxes: { name: 'Alexander', score: 100 },
-  //   wolves: { name: 'Alisa', score: 76 },
-  //   tigers: { name: 'Viktor', score: 80 }
+  //   foxes: [
+  //     { name: 'Alexander', score: 100 },
+  //     { name: 'Vladimir', score: 92 }
+  //   ],
+  //   wolves: [
+  //     { name: 'Alisa', score: 76 },
+  //   ],
+  //   tigers: [
+  //     { name: 'Viktor', score: 80 }
+  //   ]
   // }
   
   
-  console.log(highestScore([])); //{}
+  console.log(graduates([])); //{}
