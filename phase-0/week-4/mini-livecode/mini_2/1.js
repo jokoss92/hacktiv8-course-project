@@ -16,14 +16,26 @@
 
 function formatUang(number) {
   // code below here
-  var uang = number.toString().split()
-  uang[0] = uang[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+  // var uang = number.toString().split()
+  var uang = number.split(' ')
+  // console.log(uang)
+  var rupiah = []
+  // console.log(arr)
+  // uang[0] = uang[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".")
   // for(var i=0; i>number.length;i++){
   //   if(uang.length === 0){
   //     uang.push('.')
   //   }
   // }
-  return "Rp" + uang[0] + ",00"
+  // for(var i=number.length-1; i>0;i--){
+  //   if(i%3 === 0){
+  //     arr.push(number)
+
+  //   }
+  // }
+  // console.log(arr)
+  // // console.log(uang)
+  // return "Rp" + uang[0] + ",00"
 }
 
 console.log(formatUang(7500)); // Rp7.500,00

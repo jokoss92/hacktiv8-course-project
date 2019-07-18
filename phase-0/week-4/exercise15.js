@@ -1,9 +1,15 @@
 function highestScore (students) {
     // Code disini
-    var result = {}
+    
+    var arrResult = []
     for(var i=0;i<students.length;i++){
-       consogit 
+       var result = {}
+       if(result.class !== students[i].class){
+         result.class = students[i].class
+       }
+       
     }
+    console.log(result)
   }
   
   // TEST CASE

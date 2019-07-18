@@ -5,24 +5,29 @@ function countProfit(shoppers) {
 		[ 'Sweater Uniklooh', 175000, 1 ]
 	];
 	// you can only write your code here
-  var arrResult = []
-	for (var i = 0; i < listBarang.length; i++) {
-    var objectShoppers = {};
-		var arrShoppers = [];
-		var jumlahBeli = 0;
-		for (var j = 0; j < shoppers.length; j++) {
-			if (listBarang[i][0] === shoppers[j].product && shoppers[j].amount < listBarang[i][2]) {
-				arrShoppers.push(shoppers[j].name);
-				jumlahBeli += shoppers[j].amount;
+	if (shoppers.length === 0) {
+		return [];
+	} else {
+		var arrResult = [];
+		for (var i = 0; i < listBarang.length; i++) {
+			var objectShoppers = {};
+			var arrShoppers = [];
+			var jumlahBeli = 0;
+			for (var j = 0; j < shoppers.length; j++) {
+				if (listBarang[i][0] === shoppers[j].product && shoppers[j].amount < listBarang[i][2]) {
+					arrShoppers.push(shoppers[j].name);
+					jumlahBeli += shoppers[j].amount;
+				}
+				objectShoppers.product = listBarang[i][0];
+				objectShoppers.shoppers = arrShoppers;
+				objectShoppers.leftOver = listBarang[i][2] - jumlahBeli;
+				objectShoppers.totalProfit = jumlahBeli * listBarang[i][1];
 			}
-			objectShoppers.product = listBarang[i][0];
-			objectShoppers.shoppers = arrShoppers;
-      objectShoppers.leftOver = listBarang[i][2] - jumlahBeli;
-      objectShoppers.totalProfit = jumlahBeli * listBarang[i][1]
+			arrResult.push(objectShoppers);
 		}
-		arrResult.push(objectShoppers)
-  }
-  return arrResult
+	}
+
+	return arrResult;
 }
 
 //   console.log(objectBarang)
@@ -69,7 +74,7 @@ console.log(
 //   //     shoppers: [ 'Rani' ],
 //   //     leftOver: 0,
 //   //     totalProfit: 175000 } ]
-//   console.log(countProfit([{name: 'Windi', product: 'Sepatu Naiki', amount: 5}]));
+console.log(countProfit([ { name: 'Windi', product: 'Sepatu Naiki', amount: 5 } ]));
 //   // [ { product: 'Sepatu Stacattu',
 //   //     shoppers: [],
 //   //     leftOver: 10,
@@ -82,4 +87,4 @@ console.log(
 //   //     shoppers: [],
 //   //     leftOver: 1,
 //   //     totalProfit: 0 } ]
-//   console.log(countProfit([])); //[]
+console.log(countProfit([])); //[]
