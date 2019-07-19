@@ -2,10 +2,6 @@ function changeMe(arr) {
     // you can only write your code here!
     for(i =0;i<arr.length; i++){
         var result = {}
-        var key1 = 'firstName'
-        var key2 = 'lastName'
-        var key3 = 'gender'
-        var key4 = 'age'
         result.firstName = arr[i][0]
         result.lastName = arr[i][1]
         result.gender = arr[i][2]
