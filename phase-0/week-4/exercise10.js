@@ -6,8 +6,6 @@ function changeMe(arr) {
         var key2 = 'lastName'
         var key3 = 'gender'
         var key4 = 'age'
-        // join[i] = arr[i]
-        // return join
         result.firstName = arr[i][0]
         result.lastName = arr[i][1]
         result.gender = arr[i][2]
@@ -16,7 +14,8 @@ function changeMe(arr) {
         } else {
             result.age = 2019 - arr[i][3]
         }
-        console.log(i+1+'. '+arr[i][0]+" "+arr[i][1] + '\n' + JSON.stringify(result, null, 2))
+        console.log(i+1+'. '+arr[i][0]+" "+arr[i][1])
+        console.log(result)
         }
         
     }

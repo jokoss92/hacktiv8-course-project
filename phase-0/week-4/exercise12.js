@@ -12,11 +12,14 @@ function countProfit(shoppers) {
 		for (var i = 0; i < listBarang.length; i++) {
 			var objectShoppers = {};
 			var arrShoppers = [];
+			var stock = listBarang[i][2]
 			var jumlahBeli = 0;
 			for (var j = 0; j < shoppers.length; j++) {
-				if (listBarang[i][0] === shoppers[j].product && shoppers[j].amount < listBarang[i][2]) {
+				if (listBarang[i][0] === shoppers[j].product && jumlahBeli+shoppers[j].amount <= stock) {
 					arrShoppers.push(shoppers[j].name);
 					jumlahBeli += shoppers[j].amount;
+					// listBarang[i][2] -= jumlahBeli;
+					
 				}
 				objectShoppers.product = listBarang[i][0];
 				objectShoppers.shoppers = arrShoppers;
@@ -33,13 +36,13 @@ function countProfit(shoppers) {
 //   console.log(objectBarang)
 
 //   // TEST CASES
-console.log(
-	countProfit([
-		{ name: 'Windi', product: 'Sepatu Stacattu', amount: 2 },
-		{ name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3 },
-		{ name: 'Rani', product: 'Sweater Uniklooh', amount: 2 }
-	])
-);
+// console.log(
+// 	countProfit([
+// 		{ name: 'Windi', product: 'Sepatu Stacattu', amount: 2 },
+// 		{ name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3 },
+// 		{ name: 'Rani', product: 'Sweater Uniklooh', amount: 2 }
+// 	])
+// );
 //   //[ { product: 'Sepatu Stacattu',
 //   //   shoppers: [ 'Windi', 'Vanessa' ],
 //   //   leftOver: 5,

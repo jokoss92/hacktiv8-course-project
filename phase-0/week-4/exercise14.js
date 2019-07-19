@@ -1,5 +1,5 @@
 function naikAngkot(arrPenumpang) {
-    rute = ['A', 'B', 'C', 'D', 'E', 'F'];
+    var rute = ['A', 'B', 'C', 'D', 'E', 'F'];
     //your code here
     var tarif = 2000
     var awal = 0
@@ -18,7 +18,8 @@ function naikAngkot(arrPenumpang) {
                 awal = j + 1
             }
         }
-        objPenumpang.bayar = (akhir-awal)*tarif
+        var tarifBayar = (akhir-awal) * tarif
+        objPenumpang.bayar = tarifBayar
         arrResult.push(objPenumpang)
     }
     return arrResult
