@@ -28,43 +28,37 @@ o o
 */
 
 function standBackTriangel(width) {
-  
-    // your code here 
-    // var space = ''
-    // for (var i=width; i>0; i--){
-    //   for(var j=0; j<i; j++){
-    //     // space += "o"
-    //     if(i === width ){
-    //     }
-    //   }
-    //   // console.log(space)
-    //   // space=''
-    // }
-    // for(var i=width-1; i>0; i--){
-    //   for(var j=0; j<i; j++){
-    //     space += "o"
-    //   }
-    //   console.log(space)
-    //   space=''
-    // }
-    
-    for(var i=width; i>0;i--){
-      var space = ''
-      for(var j=0; j<width;j++){
-        if()
+  var o = width-1
+  for(var i=0;i<width;i++){
+    let result = ""
+    for(var j=0;j<width;j++){
+      if(j !== o && j !==width-1){
+        result += " "
+      } else {
+        result += "o"
       }
-      // if(){
-
-      // }
-      console.log('Ini i',i,'ini j',j)
-      // space += 'o'
-      // console.log(space)
     }
+    o--
+    console.log(result)
+  }
+  o=1
+  for(var i=0;i<width-1;i++){
+    var result = ""
+    for(var j=0;j<width;j++){
+      if(j !==o && j !== width-1){
+        result += " "
+      } else {
+        result += "o"
+      }
+    }
+    o++
+    console.log(result)
+  }
 
 }
  
  standBackTriangel( 3 )
-//  standBackTriangel( 5 )
+ standBackTriangel( 7 )
  
  /*
  input:5

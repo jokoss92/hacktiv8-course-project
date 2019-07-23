@@ -6,6 +6,7 @@ var exercise1 = [
   { name: 'eyeshield', position: 'RB', ability: 'topSpeed', score: 80 }
 ]
 
+// 
 // Release 1 => coba ambil nama-nama yang nilainya diatas 30
 /* 
   [ 
@@ -13,6 +14,28 @@ var exercise1 = [
     { name: 'eyeshield', position: 'RB', ability: 'topSpeed', score: 80 }
   ]
 */
+function above30 (exercise1){
+    var result = []
+    for(var i=0; i<exercise1.length; i++){
+      if(exercise1[i].score > 30){
+        result.push(exercise1[i])
+      }
+    }
+    return result
+  }
+
+function between7090(exercise1){
+  var result1 = []
+  for(var j=0; j<exercise1.length; j++){
+    if(exercise1[j].score > 70 && exercise1[j].score <90){
+      result1.push(exercise1[j])
+    }
+  }
+  return result1
+}
+  
+// console.log(above30(exercise1))
+console.log(between7090(exercise1))
 // Release 2 => coba ambil nama-nama yang nilainya diantara 70 dan 90
 /* 
   [ 
