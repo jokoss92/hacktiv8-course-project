@@ -9,10 +9,13 @@ function sort(arr) {
       // jika data ke i > dari data lain, swip data, shg data ke i di depan
       // jika data ke i < dari data lain, swip data, shg data ke i di belakang
       // ubah tanda > atau < untuk asc atau dcs
+
       if (arr[i] > arr[j]) {
         temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+
+        console.log(arr);
       }
     }
   }

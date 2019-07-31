@@ -10,9 +10,10 @@ function pop(arr) {
 
   arr = tempArr;
 
-  console.log(arr);
+  return arr;
 }
 
 var array = [0, 1, 2, 3, 4];
 
-console.log(array.pop());
+console.log(pop(array));
+console.log(array);

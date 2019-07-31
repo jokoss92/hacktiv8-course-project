@@ -1,44 +1,43 @@
 function split(str, separator) {
   var splitedStr = [];
   var indexOfSplitedStr = 0;
-  var tempSeparator = 0;
+  var tempData = "";
 
-  // do loop
   for (var i = 0; i < str.length; i++) {
-    // jika character sama dengan separator, tambahkan menjadi data, kemudian push ke array
-    if (str[i] === separator) {
-      var tempData = "";
+    var separatorPattern = true;
+    var indexOfSeparatorPattern = 0;
 
-      // do loop, to add character into data
-      for (var j = tempSeparator; j < i; j++) {
-        if (str[j] !== separator) {
-          tempData += str[j];
-        }
+    // cek separator pattern
+    for (var j = i; indexOfSeparatorPattern < separator.length; j++) {
+      if (str[j] !== separator[indexOfSeparatorPattern]) {
+        separatorPattern = false;
+        break;
       }
 
-      // add data to array
+      indexOfSeparatorPattern++;
+    }
+
+    // jika karakter indek ke i bukan separator, tampung di tempData
+    if (separatorPattern === false) {
+      tempData += str[i];
+    }
+    // jika separator, maka push ke array
+    else {
       splitedStr[indexOfSplitedStr] = tempData;
       indexOfSplitedStr++;
-      tempSeparator = i;
-    }
-  }
-
-  // tambah data terakhir setelah separator, jika ada
-  if (tempSeparator < str.length - 1) {
-    tempData = "";
-
-    // do loop, mulai dari separator terakhir, sampai data terakhir
-    for (var k = tempSeparator + 1; k < str.length; k++) {
-      tempData += str[k];
+      tempData = "";
+      i = i + separator.length - 1;
     }
 
-    // add to last array
-    splitedStr[indexOfSplitedStr] = tempData;
+    // masukkan karakter setelah separator terakhir
+    if (i === str.length - 1) {
+      splitedStr[indexOfSplitedStr] = tempData;
+    }
   }
 
   return splitedStr;
 }
 
-var string = "111-222-333-444-555-";
+var string = "aku dan kamu";
 
-console.log(split(string, "-"));
+console.log(split(string, " dan "));
