@@ -20,17 +20,26 @@
 
 function changeXRecursive(data, jenis) {
   // code here
-  var splitNumber = data.split('')
-  console.log(splitNumber)
-  for(var i=0; i<splitNumber.length; i++){
-    if(jenis === 'ganjil' && (Number(splitNumber)%2 === 0)){
-      splitNumber[i] = 'x'
-    } else if(jenis === 'genap' && (Number(splitNumber)%2 !== 0)){
-      splitNumber[i] = 'x'
-    }
+//   var splitNumber = data.split('')
+//   console.log(splitNumber)
+//   for(var i=0; i<splitNumber.length; i++){
+//     if(jenis === 'ganjil' && (Number(splitNumber)%2 === 0)){
+//       splitNumber[i] = 'x'
+//     } else if(jenis === 'genap' && (Number(splitNumber)%2 !== 0)){
+//       splitNumber[i] = 'x'
+//     }
+//   }
+//   console.log(splitNumber)
+// }
+  if(data.length<2){
+    return data
   }
-  console.log(splitNumber)
-}
 
+  else if(jenis === 'ganjil'){
+    return 'x' + data[1] + changeXRecursive(data.slice(2))
+  } else {
+    return data[0] + 'x' + changeXRecursive(data.slice(2))
+  }
+}
 console.log(changeXRecursive('012345678922468', 'ganjil'));//x1x3x5x7x9xxxxx
 console.log(changeXRecursive('0123456789', 'genap'));//0x2x4x6x8x

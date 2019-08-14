@@ -48,14 +48,29 @@ function userWeapon(user, weapon) {
     'brokenArms': { type: 'knuckle', attack: 40 }
   }
   // code here
-  for(var i=0; i<heroes.length; i++){
-    for(var j in weapons){
-      // console.log(weapons[j])
-      if(heroes[i].weaponTypes === weapons[j].type){
-        user.weapon = weapons[j]
-      }
+  // for(var i=0; i<heroes.length; i++){
+  //   for(var j in weapons){
+  //     // console.log(weapons[j])
+  //     if(heroes[i].weaponTypes === weapons[j].type){
+  //       user.weapon = weapons[j]
+  //     }
+  //   }
+  // }
+  var weaponType = ''
+  var keyWeapons = Object.keys(weapons)
+  var valueWeapons = Object.values(values)
+  var oldWeaponDamage = 0
+  for(var i=0; i<keyWeapons.length;i++){
+    console.log(keyWeapons[i])
+    console.log(valueWeapons[i])
+    if(weapon === keyWeapons[i]){
+      weaponType = valueWeapons[i]
     }
   }
+    if(user.weapon === keyWeapons[i]){
+      oldWeaponDamage = valueWeapons[i].attack
+    }
+
   // user.attack += weapons[j].attack 
   return user.name + " menggunakan senjata " + weapon + " attack menjadi " + (user.attack + weapons[j].attack)
 
